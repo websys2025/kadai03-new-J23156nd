@@ -38,6 +38,16 @@
                     return;
                 }
 
+                const item = items[no - 1]; 
+                // 在庫があるか確認
+                if (item.stock > 0) {
+                    console.log("商品番号:",item.id, "商品名:"item.name,"を購入します。");
+                    item.stock--; // 購入処理
+                } else {
+                    console.log(`商品番号: ${item.id}, 商品名: ${item.name}を購入します。`);
+                    console.log("在庫がありません。");
+                }
+
                 
                 showItemList(); // 商品一覧の表示関数呼び出し
             }
