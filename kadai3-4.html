@@ -33,6 +33,12 @@
             // 商品購入の関数
             function buyItem(no) {
                 // ここにコードを書く
+                if (no < 1 || no > items.length) {
+                    console.log(no,"は在庫がありません。");
+                    return;
+                }
+
+                
                 showItemList(); // 商品一覧の表示関数呼び出し
             }
 
