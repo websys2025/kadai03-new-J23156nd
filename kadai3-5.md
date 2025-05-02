@@ -1,10 +1,27 @@
 ## 自動販売機（データ構造と各種処理）のミニレポート
 ### Q5-1. 自動販売機の商品データついて説明せよ。
-* データ構造（各項目とその説明）test
+* データ構造（各項目とその説明
+   id 商品番号
+   name　商品名
+   price　価格
+   stock　在庫
 * 連想配列の配列として定義するメリット
+項目を追加しやすく、将来的にの情報も加えられる。
+見通しの良いコードになる。
+処理が速い
+
+
 ### Q5-2. showItemListの処理内容について説明せよ。
 * 配列の繰り返し処理
+    function showItemList() {
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+    console.log(`ID: ${item.id}, 名前: ${item.name}, 値段: ${item.price}円, 在庫: ${item.stock}`);
+  }
+}
+
 * 連想配列の参照方法
+    item.name
 ### Q5-3. buyItemの処理内容について説明せよ。
 * 商品購入の可否判定
 * 商品在庫を減らす処理
