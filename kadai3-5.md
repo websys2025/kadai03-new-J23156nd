@@ -28,8 +28,31 @@
     item.name
 ### Q5-3. buyItemの処理内容について説明せよ。
 * 商品購入の可否判定
+  ユーザーが入力した商品番号 no が、配列 items の範囲外（1〜items.length）であれば、エラーメッセージを表示して処理を中断します。
+　商品番号は 1 から始まってる。
+
+　if (no < 1 || no > items.length) {
+    console.log(no, "はエーラ在庫がありません。");
+    return;
+}
+
 * 商品在庫を減らす処理
+  　const item = items[no - 1];
+if (item.stock > 0) {
+    console.log("商品番号:", item.id, "商品名:" item.name, "を購入します。");
+    item.stock--; // 在庫を1減らす
+} else {
+    console.log(`商品番号: ${item.id}, 商品名: ${item.name}を購入します。`);
+    console.log("在庫がありません。");
+}
+
+商品の在庫（item.stock）が 1以上あれば購入処理（在庫を1つ減らす）
+在庫が 0になったらは購入不可 として「在庫がありません」と表示します。
+
 * 商品番号のエラー処理
+
+
+　
 ### Q5-4. プログラムの考察
 * データ構造について
 * 商品一覧表示と購入処理を関数化したメリット
