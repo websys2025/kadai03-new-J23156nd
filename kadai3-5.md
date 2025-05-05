@@ -13,12 +13,16 @@
 
 ### Q5-2. showItemListの処理内容について説明せよ。
 * 配列の繰り返し処理
-    function showItemList() {
-  for (let i = 0; i < items.length; i++) {
+　items 配列の長さ表示
+　console.log("商品は以下の" + items.length + "種類です。");
+
+　items 配列に格納された商品情報を1件ずつ取り出して表示す
+ for (let i = 0; i < items.length; i++) {
     const item = items[i];
-    console.log(`ID: ${item.id}, 名前: ${item.name}, 値段: ${item.price}円, 在庫: ${item.stock}`);
-  }
+    console.log("商品番号:" ,item.id, "商品名:",item.name, "金額:"item.price, "在庫数:"item.stock);
 }
+
+
 
 * 連想配列の参照方法
     item.name
